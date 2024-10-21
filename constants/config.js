@@ -1,6 +1,5 @@
 const corsOptions = {
   origin: [
-    "http://localhost:5173",
     "https://chatbox-frontend-five.vercel.app/login",
     process.env.CLIENT_URL,
   ],

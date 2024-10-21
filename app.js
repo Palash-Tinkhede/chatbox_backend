@@ -57,10 +57,7 @@ app.set("io", io);
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-  origin: [
-    "https://chatbox-frontend-five.vercel.app/login",
-    process.env.CLIENT_URL,
-  ],
+  origin: process.env.CLIENT_URL,
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));

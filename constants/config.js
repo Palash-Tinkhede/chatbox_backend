@@ -4,7 +4,7 @@ const corsOptions = {
     process.env.CLIENT_URL,
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true,
+  credentials: true
 };
 
 const CHATTU_TOKEN = "chattu-token";

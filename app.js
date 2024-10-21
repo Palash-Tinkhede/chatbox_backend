@@ -56,7 +56,14 @@ app.set("io", io);
 // Using Middlewares Here
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors(corsOptions));
+app.use(cors({
+  origin: [
+    "https://chatbox-frontend-five.vercel.app/login",
+    process.env.CLIENT_URL,
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 
 app.use("/api/v1/user", userRoute);
 app.use("/api/v1/chat", chatRoute);
